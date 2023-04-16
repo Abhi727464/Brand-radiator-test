@@ -13,7 +13,7 @@ const UserData = ({ users }) => {
     <>
       <h1 className="newuser">NEW CUSTOMERS DATA</h1>
       <div className="view-container">
-        {users.length > 0 && (
+    
           <div className="table-responsive">
             <table className="table">
               <thead className="tablehead">
@@ -38,7 +38,6 @@ const UserData = ({ users }) => {
               </tbody>
             </table>
           </div>
-        )}
       </div>
       <div style={{margin:"10px auto", width:"100%",display:"flex", justifyContent:"center", alignItems:"center"}}>
       <button class="btn-hover color-9" onClick={logOut} type="submit">
