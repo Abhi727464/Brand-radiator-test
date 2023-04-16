@@ -16,6 +16,9 @@ function App() {
      if(data){
       return JSON.parse(data)
      }
+     else{
+      return []
+     }
     }
 
   const [users,setUsers] = useState(getData())
