@@ -13,9 +13,11 @@ function App() {
 
   const getData = ()=>{
     let data =   localStorage.getItem("users") || []
-     if(data){
-      return JSON.parse(data)
-     }
+    //  if(data){
+    //   return JSON.parse(data || []) 
+    //  }
+    console.log(data)
+    return data ? JSON.parse(data) : []
      
     }
 
@@ -48,7 +50,7 @@ function App() {
       });
   }
   useEffect(()=>{
-    localStorage.setItem("users",JSON.stringify(users))
+    localStorage.setItem("users",JSON.stringify(users || [])) 
   },[users]);
 
 
