@@ -17,7 +17,7 @@ function App() {
     //   return JSON.parse(data || []) 
     //  }
     console.log(data)
-    return data ? JSON.parse(data) : []
+    return data && data.length ? JSON.parse(data) : []
      
     }
 
