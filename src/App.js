@@ -12,9 +12,9 @@ import { ToastContainer, toast } from "react-toastify";
 function App() {
 
   const getData = ()=>{
-    let data =   localStorage.getItem("users")
+    let data =   localStorage.getItem("users") || []
      if(data){
-      return JSON.parse(data || {})
+      return JSON.parse(data)
      }
      
     }
