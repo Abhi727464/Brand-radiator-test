@@ -25,7 +25,7 @@ const UserData = ({ users }) => {
                 </tr>
               </thead>
               <tbody>
-                {users.map((user) => {
+                {users?.map((user) => {
                   return (
                     <tr key={user.name}>
                       <td>{user.name}</td>

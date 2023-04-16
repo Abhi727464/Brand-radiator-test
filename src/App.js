@@ -13,13 +13,10 @@ function App() {
 
   const getData = ()=>{
     let data =   localStorage.getItem("users")
-    //  if(data){
-    //   return JSON.parse(data)
-    //  }
-    //  else{
-    //   return []
-    //  }
-    return JSON.parse(data);
+     if(data){
+      return JSON.parse(data)
+     }
+     
     }
 
   const [users,setUsers] = useState(getData())
