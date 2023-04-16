@@ -57,7 +57,12 @@
     text-align: center;
     margin: 10px;
   }
-
+  @media (max-width: 1300px){
+    .card{
+      width:38%;
+      height: 60vh;
+    }
+  }
   @media (max-width: 1200px){
     .card{
       width: 30%;
@@ -75,8 +80,8 @@
      flex-direction: column;
     }
     .card{
-      width: 70%;
-      height: 50vh;
+      width: 90%;
+      height: 56vh;
     }
     .about-container h4{
       font-size: 2rem;
