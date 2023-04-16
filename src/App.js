@@ -14,7 +14,7 @@ function App() {
   const getData = ()=>{
     let data =   localStorage.getItem("users")
      if(data){
-      return JSON.parse(data)
+      return JSON.parse(data || {})
      }
      
     }
