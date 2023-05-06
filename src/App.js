@@ -19,6 +19,8 @@ function App() {
     return data && data.length ? JSON.parse(data) : [];
   };
 
+
+  
   const [users, setUsers] = useState(getData());
 
   const [name, setName] = useState("");
@@ -28,23 +30,31 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("btn clicked");
-    let user = { name, email, mobile, city };
-    setUsers([...users, user]);
-    setName("");
-    setEmail("");
-    setMobile("");
-    setCity("");
-    toast.success("Data Send Successfully", {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-    });
+
+
+    if(!email.includes("@")){
+      toast.error("email is not having @")
+    }
+    else{
+      console.log("btn clicked");
+      let user = { name, email, mobile, city };
+      setUsers([...users, user]);
+      setName("");
+      setEmail("");
+      setMobile("");
+      setCity("");
+      toast.success("Data Send Successfully", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
+    
   };
   useEffect(() => {
     localStorage.setItem("users", JSON.stringify(users || []));
